@@ -1,0 +1,26 @@
+# import numpy as np
+# import pandas as pd
+# frame = pd.DataFrame(np.arange(16).reshape(4, 4),
+                      index=['white', 'black', 'red', 'blue'],
+                      columns=['up', 'down', 'right', 'left'])
+# frame.to_json('frame.json')
+# This creates a json file in the working directory.
+# Next, we read from a json file.
+pd.read_json('frame.json')
+# This reads the data in the json file that we just created above.
+# Tis case is fairly simple as the data is in tabular format. however, json files do not have a structure
+# This means that one has to somehow covert the structure dict into tabular forma. this is called 
+# normalization.
+# To normalize, we import a function called json_normalize() from the pandas library to be able to convert the 
+# dict file to a table
+# import json
+# from pandas.io.json import json_normalize
+# file = open('path/to/file' 'r')
+# text = file.read()
+# text = json.loads(text)
+# Now we are ready to apply the json_nromalize() function.
+# From a quick look at the contents of the json file, we might want to extract a table that contains a key and 
+# a value.
+# json_normalize(text, 'key')
+# this generates a table with a key value pair depending on how many keys you select or how large of data you got
+# in the file.
